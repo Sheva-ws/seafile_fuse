@@ -3,16 +3,21 @@
 
 git clone https://github.com/Sheva-ws/seafile_fuse.git    #or any other way to get seafile_fuse  
 
-mkdir -p /opt/seafile                                     #make work dir 
+#make work dir 
+
+mkdir -p /opt/seafile                                     
 cd /opt/seafile
-cp -r /path/to/seafile_duse/* /opt/seafile/               #cp files into work dir
 
-mv /path/to/docer-compose.yml.example ./docer-compose.yml #rename
+#cp files into work dir
+cp -r /path/to/seafile_duse/* /opt/seafile/               
 
-nano docer-compose.yml                                    #specifies this doc according to UR requrements
+mv /path/to/docer-compose.yml.example ./docer-compose.yml 
+
+#specifies this doc according to UR requrements
+nano docer-compose.yml                                    
 
 docker-compose up -d
 
-./start_seaf_fuse.sh                                     # exec
+./start_seaf_fuse.sh                                     
 
 
